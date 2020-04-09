@@ -18,6 +18,8 @@ public class Driver {
     }
 
     public synchronized static WebDriver getDriver() {
+        //synchronized makes method thread safe,it ensures that only 1 thread can use it at the time
+        //thread safety reduces performance but it makes everything safe
         //if webdriver object doesn't exist
         //create it
         if (driverPool.get() == null) {
