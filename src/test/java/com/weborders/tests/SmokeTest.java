@@ -2,6 +2,8 @@ package com.weborders.tests;
 
 import com.weborders.pages.LoginPage;
 import static org.testng.Assert.*;
+
+import com.weborders.utilities.BrowserUtilities;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -12,8 +14,10 @@ public class SmokeTest extends AbstractBaseTest {
         extentTest = extentReports.createTest("Verify " + component);
 
 
-        LoginPage loginPage = new LoginPage();loginPage.login();
+        LoginPage loginPage = new LoginPage();
+        loginPage.login();
         loginPage.navigateTo(component);
+        BrowserUtilities.wait(2);
         assertEquals(loginPage.getPageSubtitleText(), expectedPageSubTitle);
 
         extentTest.pass(component + " verified!");
