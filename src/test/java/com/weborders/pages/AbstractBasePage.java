@@ -34,7 +34,7 @@ public abstract class AbstractBasePage {
     }
 
     public AbstractBasePage(){ // we need this constructor method is only for use " FindBy" method in page classes
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(driver,this);
     }// whenever page objects created ,constructor is immediately being called. in other words, whenever any
     // object being created, this line of code will be executed.
 
