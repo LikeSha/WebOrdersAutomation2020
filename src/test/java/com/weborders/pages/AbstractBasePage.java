@@ -33,9 +33,15 @@ public abstract class AbstractBasePage {
         return pageLogo.getText();
     }
 
-    public AbstractBasePage(){
+    public AbstractBasePage(){ // we need this constructor method is only for use " FindBy" method in page classes
         PageFactory.initElements(Driver.getDriver(),this);
-    }
+    }// whenever page objects created ,constructor is immediately being called. in other words, whenever any
+    // object being created, this line of code will be executed.
+
+    //A constructor in Java is a special method that is used to initialize objects.
+    // The constructor is called when an object of a class is created.
+    // It can be used to set initial values for object attributes:
+
 
     /**
      * Specify component name as a parameter, like : View all products or Orders
