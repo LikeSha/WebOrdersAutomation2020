@@ -208,6 +208,18 @@ in java ,there are 4 access modifiers:
                 </configuration>
             </plugin>
 
+            above dependency is added right under this existing dependency  :
+
+     <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+
           3,  after modification ,we go to  terminal
 
           4,  write : clear
