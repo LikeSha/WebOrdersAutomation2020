@@ -188,4 +188,23 @@ in java ,there are 4 access modifiers:
     click " clone or download"---> copy the URL in the popup window.( this URL is under my username )--->
     go to inteliJ,  click file-->new--> Project from Version Control-->
     paste the URL I just copied from github-->click "Clone" right bottom corner of the window
+
+   How to run smoke_test.xml ( from testNG framework)
+
+     1, search testng maven surefire plugin and go to Maven Sureefire Plugin page
+
+     2, copy the dependency ( select " Using Suite XML Files")
+
+     <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>smoketest.xml</suiteXmlFile>
+                         --> this line original is <suiteXmlFile>testng.xml</suiteXmlFile>
+                         we need to change it to our need: smoketest.xml
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
  */
