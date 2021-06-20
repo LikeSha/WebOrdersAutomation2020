@@ -212,4 +212,30 @@ in java ,there are 4 access modifiers:
     click " clone or download"---> copy the URL in the popup window.( this URL is under my username )--->
     go to inteliJ,  click file-->new--> Project from Version Control-->
     paste the URL I just copied from github-->click "Clone" right bottom corner of the window
+
+
+    How to fork a project ?
+
+    steps :
+
+     1 , go to cybertek shool project to find out project name : WebOrderAutomation2020
+
+     2, click that project
+
+     3, then the project page showing up, go click right top corner " Fork" button ;
+     after click just wait few seconds, its copying entire project form cyberteck school remote master branch
+     to your own remote master branch. after copy, the new page automatically showing up my account page.
+     now this repository has connection bebween parent repository to my own .
+     so I can take "pull request " and proposal changes by working on my copy of the project on my own account.
+
+     4, I click " New pull request " then now its able to propose changes. so this is what the meaning of Fork
+
+     5, now the page showing my own account under WebOrder project ,
+     I just go lick green button " Clone or download" on right side of page ,
+     and copy the url from the pop-up window.
+
+     6, take this url and go to my intelliJ project WebOrdersAutomation2020
+      --> click "File"--> click "New"--> click " Project from Version Control..."
+
+     7, in the pop up window , paste that url into the column " URL "
  */
