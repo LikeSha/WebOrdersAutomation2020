@@ -2,7 +2,7 @@ package com.weborders.tests;
 
 import com.weborders.pages.LoginPage;
 import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+import static org.testng.Assert.*; // static import you can just use assertEquals in class and so on
 
 
 public class LoginTests extends AbstractBaseTest {
