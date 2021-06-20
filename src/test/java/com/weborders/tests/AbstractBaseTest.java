@@ -17,12 +17,8 @@ import java.io.IOException;
 
 public abstract class AbstractBaseTest {
 
-    protected WebDriver driver = Driver.getDriver() ;
-    // if you just write "protect WebDriver driver; " in this filed, then in the beforeMethod , you must write
-    // " driver = Driver.getDriver(); if you write "protected WebDriver driver = Driver.getDriver() ;"
-    //then in the beforeMethod , you just simply direct use driver object method, for example :
-    // driver.get(ConfigurationReader.getProperty("url"));
-    // but dont need to write " driver = Driver.getDriver(); again ,because driver object already created in the filed
+    protected WebDriver driver ;
+    // above line of code , driver variable MUST go into beforeMethod, otherwise it will have exception.
 
     protected static ExtentReports extentReports;
     protected static ExtentHtmlReporter extentHtmlReporter;
@@ -51,7 +47,7 @@ public abstract class AbstractBaseTest {
 
     @BeforeMethod
     public void setup(){
-//     driver = Driver.getDriver();
+        driver = Driver.getDriver();
         driver.get(ConfigurationReader.getProperty("url"));
         driver.manage().window().maximize();
     }
