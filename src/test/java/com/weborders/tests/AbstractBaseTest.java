@@ -19,6 +19,10 @@ public abstract class AbstractBaseTest {
 
     protected WebDriver driver ;
     // above line of code , driver variable MUST go into beforeMethod, otherwise it will have exception.
+    // the reason is , if we put code like this : protected WebDriver driver = Driver.getDriver(); in the filed,
+    // it means we only initialize driver variable once . However, for the second and third test , this driver
+    //variable will be null. that's why we need to initialize this driver variable in each test,  means ,
+    // we need to write " driver = Driver.getDriver() in to beforeMethod.
 
     protected static ExtentReports extentReports;
     protected static ExtentHtmlReporter extentHtmlReporter;
