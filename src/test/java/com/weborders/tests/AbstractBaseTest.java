@@ -56,7 +56,7 @@ public abstract class AbstractBaseTest {
         driver.manage().window().maximize();
     }
 
-    @AfterMethod
+    @AfterMethod//this ITestResult code also see project Fall2019Selenium version in AbstractTestBase class
     public void tearDown(ITestResult testResult) {
         if(testResult.getStatus()==ITestResult.FAILURE){
             String screenshotLocation = BrowserUtilities.getScreenshot(testResult.getName());
