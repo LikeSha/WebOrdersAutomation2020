@@ -12,7 +12,8 @@ public class SmokeTest extends AbstractBaseTest {
         extentTest = extentReports.createTest("Verify " + component);
 
 
-        LoginPage loginPage = new LoginPage();loginPage.login();
+        LoginPage loginPage = new LoginPage();
+        loginPage.login();
         loginPage.navigateTo(component);
         assertEquals(loginPage.getPageSubtitleText(), expectedPageSubTitle);
 
