@@ -189,7 +189,7 @@ in java ,there are 4 access modifiers:
     go to inteliJ,  click file-->new--> Project from Version Control-->
     paste the URL I just copied from github-->click "Clone" right bottom corner of the window
 
-   How to run smoke_test.xml ( from testNG framework)
+   How to run smoke_test.xml ( from testNG framework) at terminal ?
 
      1, search testng maven surefire plugin and go to Maven Sureefire Plugin page
 
@@ -207,4 +207,10 @@ in java ,there are 4 access modifiers:
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
+
+          3,  after modification ,we go to  terminal
+
+          4,  write : clear
+
+          5, write : mvn test
  */
