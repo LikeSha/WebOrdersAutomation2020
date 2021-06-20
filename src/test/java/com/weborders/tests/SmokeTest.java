@@ -225,4 +225,9 @@ in java ,there are 4 access modifiers:
           4,  write : clear
 
           5, write : mvn test
+
+          the other way use maven to run this test is just use intelliJ maven ,
+          on right site of intelliJ, open Maven tag, click " test ", that is it.
+
+    normal way to run is right click smoke_test.xml, and click run this file....
  */
