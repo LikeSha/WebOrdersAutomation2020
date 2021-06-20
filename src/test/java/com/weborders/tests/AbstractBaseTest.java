@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public abstract class AbstractBaseTest {
 
-    protected WebDriver driver ;
+    protected WebDriver driver = Driver.getDriver() ;
 
     protected static ExtentReports extentReports;
     protected static ExtentHtmlReporter extentHtmlReporter;
