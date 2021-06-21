@@ -16,7 +16,20 @@ public class Driver {
     private Driver() {
 
     }
+/*
+Parallel testing - when 2 or more tests getting executed at the same time.
 
+
+
+To make it possible, your driver must be capable to handle multiple threads.
+If driver just singleton - it cannot be in 3 places at the same time.
+To resolve this issue, we made a webdriver object threadlocal.
+ThreadLocal allows to create a copy of the object at the run time for every thread.
+Also, we need to make a getDriver method synchronized to prevent a crash.
+So 2 or more threads won’t conflict. It calls - thread safety.
+To run data provider tests in parallel,
+add parameter:@DataProvider(parallel = true) // to execute all tests in parallel
+ */
     public synchronized static WebDriver getDriver() {
         //synchronized makes method thread safe,it ensures that only 1 thread can use it at the time
         //thread safety reduces performance but it makes everything safe
