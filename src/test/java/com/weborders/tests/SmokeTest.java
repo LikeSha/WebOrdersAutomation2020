@@ -29,6 +29,21 @@ public class SmokeTest extends AbstractBaseTest {
         };
     }
 }
+
+/*
+Parallel testing - when 2 or more tests getting executed at the same time.
+
+
+
+To make it possible, your driver must be capable to handle multiple threads.
+If driver just singleton - it cannot be in 3 places at the same time.
+To resolve this issue, we made a webdriver object threadlocal.
+ThreadLocal allows to create a copy of the object at the run time for every thread.
+Also, we need to make a getDriver method synchronized to prevent a crash.
+So 2 or more threads won’t conflict. It calls - thread safety.
+To run data provider tests in parallel,
+add parameter:@DataProvider(parallel = true) // to execute all tests in parallel
+ */
 /*
 What is framework ? your project ,collection of classes of your tests with libraries.
 Place where you develop new tests.
